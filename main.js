@@ -458,7 +458,11 @@ if ("geolocation" in navigator) {
           // call function to do X
           // console.log("current arrow should be green ")
           // document.getElementById("wind-direction").style.background = "linear-gradient( rgb(39, 255, 208), rgb(0, 255, 21))";
-          document.getElementById("wind-direction").style.border = "2px solid rgb(0, 255, 21)";
+          // document.getElementById("wind-direction").style.border = "2px solid rgb(0, 255, 21)";
+          document.getElementById("wind-direction").style.background = "linear-gradient(90deg, rgba(0, 255, 157), rgb(0, 195, 255))";
+
+
+
           document.getElementById("green-arrow-id").src = greenArrowUrl;
           document.getElementById("wind-direction").innerHTML = "The wind from tatasteel is not blowing towards your location";
           document.getElementById("air-shield-img-id").src = checkedShieldUrl;
@@ -477,10 +481,15 @@ if ("geolocation" in navigator) {
           });
         } else {
           // console.log("current arrow should be red ")
-          // document.getElementById("wind-direction").style.background = "linear-gradient(rgb(255, 112, 119), rgb(252, 74, 127))";
-          document.getElementById("wind-direction").style.border = "2px solid rgb(255, 112, 119)";
+          // document.getElementById("wind-direction").style.border = "2px solid rgb(255, 112, 119)";
           document.getElementById("green-arrow-id").src = redArrowUrl;
           document.getElementById("wind-direction").innerHTML = "The wind from tatasteel is blowing towards your location";
+
+          document.getElementById("wind-direction").style.background = "linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127))";
+          // linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127));
+                    // document.getElementById("wind-direction").style.background = "linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127));
+
+
           document.getElementById("air-shield-img-id").src = clearShieldUrl;
           document.getElementById("value-shield").innerHTML = "UnSafe ⓘ";
           document.getElementById("green-cloud-id").src = redCloudUrl;

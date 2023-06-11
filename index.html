@@ -7,9 +7,8 @@
   <title>Wind App</title>
   <link rel="stylesheet" href="./style.css" type="text/css" />
   <link rel="icon" type="image/x-icon" href="/images/activated-shield.svg">
-  <a href="home.html">Home</a>
-
 </head>
+
 
 <body class="blurred neumorphic-block">
 
@@ -94,14 +93,21 @@
 
 
       <header class="header neumorphic-block">
+
+        <div class="" id="nav-block">
+          <div id="home" class="neumorphic-block">
+            <a href="home.html" class="label">Home</a>
+          </div>
+          <!-- <div id="AirShield" class="neumorphic-block"></div> -->
+        </div>
         <!-- <div id="countdown-timer">wind calc</div> -->
         <div class="current-location " id="current-id"><span class="location-name neumorphic-block"
             id="current-location-id">
             CLOSEST
-            POLLUTER: <br>TATA
+            POLLUTER <br>TATA
             STEEL</span>
           <div id="particle-div" class="neumorphic-block">
-            <div class="info-group" id="weather-icon-id">Particles ⓘ</div>
+            <div class="info-group" id="weather-icon-id">Particles</div>
             <!-- <div class="fill-div"></div> -->
             <div id="pollution-button">
               <img id="particle-img" src="/images/particle-small.png">
@@ -184,7 +190,7 @@
         <div class="label neumorphic-block" id="daily-text"><span>daily</span></div>
       </button>
       <div id="daily-box" class="expand-box">
-        <section class="day-section neumorphic-block" data-day-section>
+        <section id="daily-background" class="day-section neumorphic-block" data-day-section>
           <div class="day-card">
             <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
             <img src="images/green-arrow.svg" alt="↑" class="green-arrow-day">
