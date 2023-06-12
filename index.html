@@ -19,11 +19,11 @@
     <div id="overlay-red" class="hidden">
       <!-- class="hidden?" -->
       <div id="air-shield-popup-red-id" class="hidden neumorphic-block">
-        <ul class="popup-list label">
+        <ul class="popup-list ">
           <img src="images/clear-shield.svg" class="air-shield-popup-img">
-          <p class="popup-text-big">Protection Advised</p>
+          <p class="popup-text-big label">Protection Advised</p>
           <br>
-          <p class="popup-text-med">How do i SHIELD myself from polluted AIR</p>
+          <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
           <br>
           <li class="popup-text-small">Check AirShield before leaving</li>
           <br>
@@ -48,11 +48,11 @@
       <div id="overlay-green" class="hidden">
         <!-- class="hidden?" -->
         <div id="air-shield-popup-green-id" class="hidden neumorphic-block">
-          <ul class="popup-list label">
-            <img src="images/x-shield.svg" class="air-shield-popup-img">
-            <p class="popup-text-big">No protection needed</p>
+          <ul class="popup-list">
+            <img src="images/checked-shield.svg" class="air-shield-popup-img">
+            <p class="popup-text-big label">No protection needed</p>
             <br>
-            <p class="popup-text-med">How do i SHIELD myself from polluted AIR</p>
+            <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
             <br>
             <li class="popup-text-small">Check AirShield before leaving</li>
             <br>
@@ -68,15 +68,16 @@
         </div>
       </div>
 
-      <div id="pollution-box">
+      <div id="pollution-box" class="">
+        <div id="overlay" class=""></div>
         <div id="pollution-data" class="hide-box neumorphic-block">
           <br>
           <img id="particle-img-popup" src="/images/particle-small.png">
           <br>
           <br>
           <h2 class="label" id="pollution-h2">Air Quality Index <span id="aqi"></span></h2>
-          <h3 class="label" id="pollution-h3">Components*</h3>
-          <ul class="label" id="pollution-list">
+          <h3 class="" id="pollution-h3">Components*</h3>
+          <ul class="" id="pollution-list">
             <li>CO: <span id="co"></span></li>
             <li>NO: <span id="no"></span></li>
             <li>NO2: <span id="no2"></span></li>
@@ -97,6 +98,7 @@
         <div class="" id="nav-block">
           <div id="home" class="neumorphic-block">
             <a href="home.html" class="label">Home</a>
+            <button type="button" id="home-button" onclick="location.href='home.html'"></button>
           </div>
           <!-- <div id="AirShield" class="neumorphic-block"></div> -->
         </div>

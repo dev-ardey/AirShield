@@ -10,12 +10,20 @@
     --greyDark: #9baacf;
   }
 
-
-
-  #home {
-    /* display: flex;
-    justify-content: space-around; */
+  body {
+    color: var(--greyDark);
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: scroll; 
+    overflow-x: hidden; 
   }
+
+ 
   /* basic blocks */
 
 
@@ -177,3 +185,95 @@
 
     background-color: #444b99d2;
    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+   #nav-block {
+    display: flex;
+    justify-content: left;
+    margin-bottom: -32.5px;
+    max-width: 75%;
+  }
+
+
+  .neumorphic-block {
+    background: var(--greyLight-1);
+    box-shadow:.8rem .8rem 1.4rem var(--greyLight-2), 
+    -.2rem -.2rem 1.8rem var(--white);
+}
+
+
+
+#airshield {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 45px;
+  border-radius: 50px;
+  /* z-index: 2; */
+
+  /* Moet een overlaying invisible button maken */
+}
+
+#airshield-button {
+    position: absolute;
+    background-color: rgb(0, 255, 149,0);
+    border-radius: 20px;
+    width: 220px;
+    height: 65px;
+    /* background-color: transparent; */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-self: center;
+    z-index: 2;
+    /* left: 75%; */
+}
+
+/* link styles */
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: var( --greyDark);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* selected link */
+a:active {
+  color: var( --greyDark);
+  text-decoration: none;
+}
+
+
+
+.label {
+  /* text-transform: uppercase; */
+  font-weight: 400;
+  /* font-size: 1.5rem; */
+  color: var(--white);
+  /* color: var(--greyDark); */
+  text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
+  font-size: 1rem;
+}

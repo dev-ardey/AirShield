@@ -388,7 +388,7 @@ function renderHourlyWeather(hourly) {
         }
         // else expectedChanges should say hours.
         else {
-          document.getElementById("wind-direction-in-hours").innerHTML = "TIME UNTIL POLLUTED AIR"
+          document.getElementById("wind-direction-in-hours").innerHTML = "TIME UNTIL CLEAN AIR"
           document.getElementById("hours-until-change-id").innerHTML = calculatedExpectedRedChange + " HOURS";
         }
 
@@ -472,6 +472,11 @@ if ("geolocation" in navigator) {
           document.getElementById("overlay-button").addEventListener("click", function () {
             document.getElementById("overlay-green").classList.toggle("darken");
             document.getElementById("air-shield-popup-green-id").classList.toggle("show");
+
+            document.getElementById("overlay-green").classList.toggle("show-background");
+     
+            
+            
             document.getElementById("hide-popup-green").classList.toggle("show");
             // document.getElementById("overlay-button").style.background = "rgba(46, 84, 190, 0.562)";
             document.getElementById("overlay-button").classList.toggle("move-button-up");
@@ -495,11 +500,11 @@ if ("geolocation" in navigator) {
           document.getElementById("green-cloud-id").src = redCloudUrl;
           document.getElementById("green-cloud-id").classList.toggle("stopping-cloud");
           // background: linear-gradient(90deg, rgb(255, 60, 60), rgb(0, 119, 255))
-          document.getElementById("current-text").style.border = "2px solid rgb(255, 112, 119)";
+          // document.getElementById("current-text").style.border = "2px solid rgb(255, 112, 119)";
           // document.getElementById("temp-map-img").style.border = "2px solid rgb(255, 112, 119)";
-          document.getElementById("current-text").style.background = "linear-gradient(90deg, rgb(255, 60, 60), rgb(0, 119, 255)";
-          document.getElementById("air-shield-popup-red-id").style.background = "linear-gradient(180deg, rgb(255, 60, 60), rgb(0, 119, 255)";
-          document.getElementById("pollution-data").style.background = "linear-gradient(180deg, rgb(255, 60, 60), rgb(0, 119, 255)";
+          // document.getElementById("current-text").style.background = "linear-gradient(90deg, rgb(255, 60, 60), rgb(0, 119, 255)";
+          // document.getElementById("air-shield-popup-red-id").style.background = "linear-gradient(180deg, rgb(255, 60, 60), rgb(0, 119, 255)";
+          // document.getElementById("pollution-data").style.background = "linear-gradient(180deg, rgb(255, 60, 60), rgb(0, 119, 255)";
 
           // document.getElementById("green-cloud-id").classList.toggle("stopping-cloud");
           // mischien background blurred maken, door class te geven bij het clicken van button?
@@ -507,7 +512,11 @@ if ("geolocation" in navigator) {
 
 
           document.getElementById("overlay-button").addEventListener("click", function () {
-            document.getElementById("overlay-red").classList.toggle("darken");
+            document.getElementById("overlay-red").classList.toggle("show-background");
+
+           
+            
+
             // document.getElementById("header").classList.toggle("blur");
             document.getElementById("air-shield-popup-red-id").classList.toggle("show");
             document.getElementById("hide-popup-red").classList.toggle("show");
@@ -668,15 +677,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to show the pollution data
   function showPollutionData() {
     const pollutionDataElement = document.getElementById("pollution-data");
-    isPollutionDataHidden = false;
-    pollutionDataElement.classList.remove("hide-box");
+    const overlayElement = document.getElementById("overlay");
+  isPollutionDataHidden = false;
+  pollutionDataElement.classList.remove("hide-box");
+  overlayElement.classList.add("show-background");
   }
 
   // Function to hide the pollution data
   function hidePollutionData() {
     const pollutionDataElement = document.getElementById("pollution-data");
+    const overlayElement = document.getElementById("overlay");
     isPollutionDataHidden = true;
     pollutionDataElement.classList.add("hide-box");
+    overlayElement.classList.remove("show-background");
   }
 
   // Add event listener to the button
