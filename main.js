@@ -718,3 +718,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch the air pollution data on page load
   fetchAirPollutionData();
 });
+
+
+
+// new buttons 
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const toggleButtons = document.querySelectorAll(".toggle-button");
+
+//   toggleButtons.forEach(function (button) {
+//     const targetId = button.dataset.target;
+//     const targetPopup = document.getElementById(targetId);
+
+//     button.addEventListener("click", function () {
+//       togglePopup(targetPopup);
+//     });
+//   });
+
+//   function togglePopup(popup) {
+//     popup.classList.toggle("hide-box");
+//   }
+// });
