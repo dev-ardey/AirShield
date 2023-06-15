@@ -388,7 +388,7 @@ function renderHourlyWeather(hourly) {
         }
         // else expectedChanges should say hours.
         else {
-          document.getElementById("wind-direction-in-hours").innerHTML = "TIME UNTIL CLEAN AIR"
+          document.getElementById("wind-direction-in-hours").innerHTML = "TIME UNTIL POLLUTED AIR"
           document.getElementById("hours-until-change-id").innerHTML = calculatedExpectedRedChange + " HOURS";
         }
 

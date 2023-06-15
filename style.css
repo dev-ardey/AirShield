@@ -464,8 +464,8 @@ a:active {
 #weather-icon-id {
   /* font-weight: 400; */
   /* font-size: 1.5rem; */
-  color: var(--white);
-  text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
+  color: var(--greyDark);
+  /* text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5); */
   display: flex;
   justify-self: right;
   margin-top: -30px;
@@ -474,8 +474,8 @@ a:active {
 #temp-text-id {
   font-weight: 400;
   /* font-size: 1.5rem; */
-  color: var(--white);
-  text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
+  color: var(--greyDark);
+  /* text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5); */
 }
 
 .map-div {
@@ -548,8 +548,8 @@ a:active {
 #air-shield-text {
   font-weight: 400;
   /* font-size: 1.5rem; */
-  color: var(--white);
-  text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
+  color: var(--greyDark);
+  /* text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5); */
 }
 
 #shield-id {
@@ -784,9 +784,9 @@ a:active {
   text-transform: uppercase;
   font-weight: 400;
   /* font-size: 1.5rem; */
-  color: var(--white);
+  color: var(--greyDark);
   /* color: var(--greyDark); */
-  text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
+  /* text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5); */
 }
 
 .value-sub-info {
@@ -893,6 +893,8 @@ a:active {
   border: 4px solid var(--greyLight-1);
   border-radius: 60px;
   /* animation: pulse-two linear infinite 3s 1s; */
+  color: var(--white);
+  text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
 }
 #daily-text {
   display: flex;
@@ -908,6 +910,8 @@ a:active {
   border: 4px solid var(--greyLight-1);
   border-radius: 60px;
   /* animation: pulse-two linear infinite 3s 2s; */
+  color: var(--white);
+  text-shadow: 0px 0px 5px rgb(255, 255, 255,0.5);
 }
 
 
