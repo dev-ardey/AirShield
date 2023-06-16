@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirShield - Know Your Wind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>AirShield - Your Shield Against polluted air</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/x-icon" href="/images/activated-shield.svg">
+
 </head>
+
 
 <body class="neumorphic-block" id="body">
 
@@ -33,13 +36,28 @@
     </div>
 
     <div id="why" class="site-block neumorphic-block">
-        <div id="why-div" class="neumorphic-block">
-            <div id="why-text">
+        <div id="why-div">
+            <div id="why-text" class="neumorphic-block">
                 <!-- <p>Step into the Safe Zone</p> -->
                 <p>Why</p>
             </div>
+
+            <div id="why-text-block-1" class="neumorphic-block">
+                <p>Protect children's health: AirShield helps parents monitor air pollution levels, ensuring a safe
+                    environment for their children to play and grow.</p>
+            </div>
+            <div id="why-text-block-2" class="neumorphic-block">
+                <p>outdoor health</p>
+            </div>
+            <div id="why-text-block-3" class="neumorphic-block">
+                <p>Longterm health</p>
+            </div>
         </div>
-        <div id="why-img"></div>
+        <div id="why-blocks">
+            <button id="indoor-health" class="neumorphic-block"></button>
+            <button id="outdoor-health" class="neumorphic-block"></button>
+            <button id="longterm-health" class="neumorphic-block"></button>
+        </div>
     </div>
     <div id="how-to" class="site-block neumorphic-block">
         <div id="how-text" class="neumorphic-block">
@@ -83,6 +101,13 @@
         <div id="research-img"></div>
     </div>
 
+
+
+
+
+
+
+    <script type="module" src="./home.js"></script>
 </body>
 
 </html>
