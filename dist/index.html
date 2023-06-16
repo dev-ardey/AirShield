@@ -7,11 +7,12 @@
   <title>Wind App</title>
   
   <link rel="icon" type="image/x-icon" href="/assets/activated-shield-b03a1822.svg">
-  <script type="module" crossorigin src="/assets/index-277ffe79.js"></script>
-  <link rel="stylesheet" href="/assets/index-7b8b2ed9.css">
+  <script type="module" crossorigin src="/assets/index-6dabd036.js"></script>
+  <link rel="stylesheet" href="/assets/index-570dcf18.css">
 </head>
 
-<body class="blurred">
+
+<body class="blurred neumorphic-block">
 
   <!-- blurred within body : class="blurred" for loading without info later -->
 
@@ -19,12 +20,12 @@
   <div class="air-shield-popup " id="hide-popup-red">
     <div id="overlay-red" class="hidden">
       <!-- class="hidden?" -->
-      <div id="air-shield-popup-red-id" class="hidden">
-        <ul class="popup-list label">
+      <div id="air-shield-popup-red-id" class="hidden neumorphic-block">
+        <ul class="popup-list ">
           <img src="/assets/clear-shield-29986638.svg" class="air-shield-popup-img">
-          <p class="popup-text-big">Protection Advised</p>
+          <p class="popup-text-big label">Protection Advised</p>
           <br>
-          <p class="popup-text-med">How do i SHIELD myself from polluted AIR</p>
+          <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
           <br>
           <li class="popup-text-small">Check AirShield before leaving</li>
           <br>
@@ -48,12 +49,12 @@
     <div class="air-shield-popup " id="hide-popup-green">
       <div id="overlay-green" class="hidden">
         <!-- class="hidden?" -->
-        <div id="air-shield-popup-green-id" class="hidden">
-          <ul class="popup-list label">
-            <img src="/assets/x-shield-48597309.svg" class="air-shield-popup-img">
-            <p class="popup-text-big">No protection needed</p>
+        <div id="air-shield-popup-green-id" class="hidden neumorphic-block">
+          <ul class="popup-list">
+            <img src="/assets/checked-shield-b046a8ae.svg" class="air-shield-popup-img">
+            <p class="popup-text-big label">No protection needed</p>
             <br>
-            <p class="popup-text-med">How do i SHIELD myself from polluted AIR</p>
+            <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
             <br>
             <li class="popup-text-small">Check AirShield before leaving</li>
             <br>
@@ -69,15 +70,16 @@
         </div>
       </div>
 
-      <div id="pollution-box">
-        <div id="pollution-data" class="hide-box">
+      <div id="pollution-box" class="">
+        <div id="overlay" class=""></div>
+        <div id="pollution-data" class="hide-box neumorphic-block">
           <br>
           <img id="particle-img-popup" src="/assets/particle-small-a4cdc936.png">
           <br>
           <br>
           <h2 class="label" id="pollution-h2">Air Quality Index <span id="aqi"></span></h2>
-          <h3 class="label" id="pollution-h3">Components*</h3>
-          <ul class="label" id="pollution-list">
+          <h3 class="" id="pollution-h3">Components*</h3>
+          <ul class="" id="pollution-list">
             <li>CO: <span id="co"></span></li>
             <li>NO: <span id="no"></span></li>
             <li>NO2: <span id="no2"></span></li>
@@ -93,14 +95,24 @@
 
 
 
-      <header class="header">
+      <header class="header neumorphic-block">
+
+        <div class="" id="nav-block">
+          <div id="home" class="neumorphic-block">
+            <a href="home.html" class="label">Home</a>
+            <button type="button" id="home-button" onclick="location.href='home.html'"></button>
+          </div>
+          <!-- <div id="AirShield" class="neumorphic-block"></div> -->
+        </div>
         <!-- <div id="countdown-timer">wind calc</div> -->
-        <div class="current-location" id="current-id"><span class="label, location-name" id="current-location-id">
-            CLOSES
-            POLLUTER: <br>TATA
+        <div class="current-location " id="current-id">
+          <span class="location-name neumorphic-block"
+            id="current-location-id">
+            CLOSEST
+            POLLUTER <br>TATA
             STEEL</span>
-          <div id="particle-div">
-            <div class="info-group" id="weather-icon-id">Particles ⓘ</div>
+          <div id="particle-div" class="neumorphic-block">
+            <div class="info-group" id="weather-icon-id">Particles</div>
             <!-- <div class="fill-div"></div> -->
             <div id="pollution-button">
               <img id="particle-img" src="/assets/particle-small-a4cdc936.png">
@@ -111,18 +123,20 @@
         <div class="map-div">
           <div class="map-with-location" id="map-div-id">
             <img src="/assets/pollution-angle-0-98ae599a.png" id="pollution-angle" class="pollution-angle-class">
-            <img src="/assets/map-no-data-e86eaa5e.png" id="temp-map-img">
+            <img src="/assets/map-no-data-e86eaa5e.png" id="temp-map-img" class="neumorphic-block">
           </div>
         </div>
         <!-- temporary wind sign -->
         <div class="inline-div">
           <div class="info-group" id="temp-id">
             <div id="temp-text-id">Temperature</div>
-            <div class="label" id="temp-current-id"><span data-current-temp>9</span><span
-                class="value-sub-info">&deg;</span>
+            <div id="neumorphic-temp" class="neumorphic-block">
+              <div class="" id="temp-current-id"><span data-current-temp>0</span><span
+                  class="value-sub-info">&deg;</span>
+              </div>
+              <img class="weather-icon large, icon-header, header-icon" id="weather-icon-img" src="icons/sun.png"
+                data-current-icon>
             </div>
-            <img class="weather-icon large, icon-header, header-icon" id="weather-icon-img" src="icons/sun.png"
-              data-current-icon>
           </div>
           <div class="info-group" id="shield-id">
             <!-- AirShield button -->
@@ -130,8 +144,8 @@
             </button>
             <div id="air-shield-text">AirShield</div>
             <span id="value-shield"></span>
-
-            <div><span class="value-shield"></span>
+            <div id="neumorphic-shield" class="neumorphic-block">
+              <span class="value-shield"></span>
               <!-- header-icon class removed , circle removed -->
               <img class="weather-icon large, icon-header, shield-icon" id="air-shield-img-id"
                 src="/assets/checked-shield-b046a8ae.svg">
@@ -140,7 +154,7 @@
             </div>
           </div>
         </div>
-        <div class="label" id="current-text"><span>Currently</span></div>
+        <div class="label neumorphic-block" id="current-text"><span>Currently</span></div>
         <div class="border"></div>
         <div class="header-top">
           <div class="header-current-wind">
@@ -152,7 +166,8 @@
           <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-current" id="green-arrow-id">
         </div>
         <div class="air-api">
-          <div id="wind-direction">The wind from tatasteel is not blowing towards your location</div>
+          <div id="wind-direction" class="neumorphic-block">The wind from tatasteel is not blowing towards your location
+          </div>
         </div>
         <div class="header-bottom">
           <div class="info-group, hidden">
@@ -164,8 +179,8 @@
             <div><span data-current-low="">32</span>&deg;C</div>
           </div>
           <div class="info-group">
-            <div class="label" id="wind-direction-in-hours">wind direction changes in</div>
-            <div><span id="hours-until-change-id">0</span></div>
+            <div class="" id="wind-direction-in-hours">wind direction changes in</div>
+            <div><span id="hours-until-change-id" class="">0</span></div>
           </div>
           <!-- hidden -->
           <div class="info-group, hidden">
@@ -177,10 +192,10 @@
 
       </header>
       <button id="toggleButton-day">
-        <div class="label" id="daily-text"><span>daily</span></div>
+        <div class="label neumorphic-block" id="daily-text"><span>daily</span></div>
       </button>
       <div id="daily-box" class="expand-box">
-        <section class="day-section" data-day-section>
+        <section id="daily-background" class="day-section neumorphic-block" data-day-section>
           <div class="day-card">
             <img src="icons/cloud.png" class="weather-icon, hidden" alt="">
             <img src="/assets/green-arrow-9b1f5ab7.svg" alt="↑" class="green-arrow-day">
@@ -226,10 +241,10 @@
         </section>
       </div>
       <button id="toggleButton-hour">
-        <div class="label" id="hourly-text"><span>hourly</span></div>
+        <div class="label neumorphic-block" id="hourly-text"><span>hourly</span></div>
       </button>
       <div id="hourly-box" class="expand-box">
-        <table class="hour-section">
+        <table class="hour-section neumorphic-block">
           <tbody data-hour-section>
             <tr class="hour-row">
               <td>
@@ -386,7 +401,7 @@
           <img src="images/green-arrow.svg" alt="↑" class="green-arrow-day" id="green-arrow-day-id">
           <!-- deze aanpassen van weather icon data toevoegen wind direction daily -->
           <div class="day-card-day" data-date> </div>
-          <div><span data-temp></span><span>&deg;C</span></div>
+          <div class=""><span data-temp></span><span>&deg;C</span></div>
         </div>
       </template>
       <template id="hour-row-template">
@@ -394,7 +409,7 @@
           <td>
             <div class="info-group">
               <div class="label" data-day></div>
-              <div data-time></div>
+              <div class="label" data-time></div>
             </div>
           </td>
           <td>
@@ -403,7 +418,7 @@
           <td>
             <div class="info-group">
               <div class="label">Temp</div>
-              <div><span data-temp></span><span>&deg;C</span></div>
+              <div class="label"><span data-temp></span><span>&deg;C</span></div>
             </div>
           </td>
           <td>
