@@ -6,21 +6,10 @@ const indoorHealth = document.getElementById('indoor-health');
 const outdoorHealth = document.getElementById('outdoor-health');
 const longtermHealth = document.getElementById('longterm-health');
 
-// why images
-const whyImg1 = document.getElementById('why-img-1');
-const whyImg2 = document.getElementById('why-img-2');
-const whyImg3 = document.getElementById('why-img-3');
-
-
 
 // first button is always activated
 let midButtonActive = outdoorHealth.style.background = "linear-gradient(0deg, rgba(0, 255, 157), rgb(0, 195, 255))";
-let midButtonBeInFront = textBlock2.style.zIndex = 2;
-
-// first why image
-let MidImgBeInFront = whyImg2.style.zIndex = 2;
-
-
+let midButtonBeInFromt = textBlock2.style.zIndex = 2;
 // Attach event listeners to the buttons
 indoorHealth.addEventListener('click', function () {
     // Set z-index to 2 for outdoorHealth and 1 for others
@@ -30,13 +19,7 @@ indoorHealth.addEventListener('click', function () {
     outdoorHealth.style.background = '';
     textBlock3.style.zIndex = 1;
     longtermHealth.style.background = '';
-
-
-    // why images
-    whyImg1.style.zIndex = 2;
-    whyImg2.style.zIndex = 1;
-    whyImg3.style.zIndex = 1;
-
+    
 });
 
 
@@ -49,11 +32,6 @@ outdoorHealth.addEventListener('click', function () {
     textBlock3.style.zIndex = 1;
     longtermHealth.style.background = '';
 
-     // why images
-     whyImg1.style.zIndex = 1;
-     whyImg2.style.zIndex = 2;
-     whyImg3.style.zIndex = 1;
-
 });
 
 longtermHealth.addEventListener('click', function () {
@@ -64,11 +42,6 @@ longtermHealth.addEventListener('click', function () {
     indoorHealth.style.background = '';
     textBlock2.style.zIndex = 1;
     outdoorHealth.style.background = '';
-
-     // why images
-     whyImg1.style.zIndex = 1;
-     whyImg2.style.zIndex = 1;
-     whyImg3.style.zIndex = 2;
 });
 
 
