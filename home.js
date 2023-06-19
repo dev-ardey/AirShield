@@ -10,6 +10,8 @@ const longtermHealth = document.getElementById('longterm-health');
 // first button is always activated
 let midButtonActive = outdoorHealth.style.background = "linear-gradient(0deg, rgba(0, 255, 157), rgb(0, 195, 255))";
 let midButtonBeInFromt = textBlock2.style.zIndex = 2;
+
+
 // Attach event listeners to the buttons
 indoorHealth.addEventListener('click', function () {
     // Set z-index to 2 for outdoorHealth and 1 for others
@@ -19,7 +21,9 @@ indoorHealth.addEventListener('click', function () {
     outdoorHealth.style.background = '';
     textBlock3.style.zIndex = 1;
     longtermHealth.style.background = '';
-    
+    document.getElementById("why-text-block-1").classList.add("pulse");
+
+
 });
 
 
@@ -31,6 +35,9 @@ outdoorHealth.addEventListener('click', function () {
     indoorHealth.style.background = '';
     textBlock3.style.zIndex = 1;
     longtermHealth.style.background = '';
+    document.getElementById("why-text-block-2").classList.add("pulse");
+
+
 
 });
 
@@ -42,6 +49,9 @@ longtermHealth.addEventListener('click', function () {
     indoorHealth.style.background = '';
     textBlock2.style.zIndex = 1;
     outdoorHealth.style.background = '';
+    document.getElementById("why-text-block-3").classList.add("pulse");
+
+
 });
 
 
