@@ -37,10 +37,10 @@ body {
   width: 100%;
   scroll-behavior: smooth;
   margin: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
   overflow-y: scroll; 
-  overflow-x: hidden; 
+  overflow-x: 0;
   box-sizing: border-box;
 }
 
@@ -76,6 +76,8 @@ body {
   justify-content: center;
   align-content: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 /* fout zit tussen hier */
@@ -95,7 +97,7 @@ body {
   position: absolute;
   z-index: 2;
   /* margin vanwege auto div */
-  margin-left: -10px;
+  /* margin-left: -10px; */
 }
 
 #overlay-green {
@@ -111,7 +113,7 @@ body {
   position: absolute;
   z-index: 2;
   /* margin vanwege auto div */
-  margin-left: -10px;
+  /* margin-left: -10px; */
 }
 
 
@@ -162,11 +164,11 @@ body {
 }
 
 .popup-text-small {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .air-shield-popup-img {
-  width: 100px;
+  width: 50px;
   display: flex;
   justify-self: center;
   padding-top: 30px;
@@ -183,7 +185,7 @@ body {
 
 
 .text-src {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
 }
 
 #overlay-green {
@@ -275,7 +277,7 @@ body {
 
 #weather-icon-id{
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #current-location-id {
@@ -284,7 +286,7 @@ body {
 }
 
 #temp-text-id {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #temp-current-id {
@@ -292,7 +294,7 @@ body {
 }
 
 #air-shield-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #value-shield {
@@ -361,6 +363,8 @@ body {
   width: 220px;
   height: 45px;
   border-radius: 50px;
+  animation: pulse 5s ease-in-out infinite;
+
   /* z-index: 2; */
 
   /* Moet een overlaying invisible button maken */
@@ -570,6 +574,8 @@ a:active {
   padding: 5px 0px 0px 50px;
   height: 50px;
   margin-top: 20px;
+  animation: pulse 5s ease-in-out infinite;
+
 }
 
 
@@ -620,21 +626,25 @@ a:active {
   }
 }
 
-.location-name {
+/* .location-name {
   animation: pulse 3s ease-in-out infinite;
-}
+} */
 
 @keyframes pulse {
   0% {
-    /* border: 2px solid rgb(0, 255, 21); */
+    border: 2px solid rgb(0, 255, 21,0);
     /* box-shadow: 5px 10px 10px rgb(0, 0, 0, 0.2) ; */
   }
-  75% {
-    /* border: 2px solid rgb(0, 255, 21, 0.3); */
+  30% {
+    border: 2px solid rgb(0, 255, 21, 1);
+    /* box-shadow: 5px 2px 10px rgb(0, 0, 0, 0.2) ; */
+  }
+  60% {
+    border: 2px solid rgb(0, 255, 21, 0);
     /* box-shadow: 5px 2px 10px rgb(0, 0, 0, 0.2) ; */
   }
   100% {
-    /* border: 2px solid rgb(0, 255, 21); */
+    border: 2px solid rgb(0, 255, 21,0);
     /* box-shadow: 5px 10px 10px rgb(0, 0, 0, 0.2) ; */
   }
 }
@@ -1002,6 +1012,8 @@ a:active {
   width: 50px;
   height: 100px;
   margin-right: 10px;
+  animation: pulse 5s ease-in-out infinite;
+
 }
 
 #particle-img-popup {

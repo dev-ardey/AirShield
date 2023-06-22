@@ -57,4 +57,96 @@ longtermHealth.addEventListener('click', function () {
 
 
 
-// document.getElementById("outdoor-health").style.background = "linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127))";
+// side scroll animation
+// working first one not working
+
+
+// // Get the side-scroll-block elements
+// const sideScrollBlocks = document.querySelectorAll('.side-scroll-block');
+
+// // Check if the elements exist before proceeding
+// if (sideScrollBlocks.length > 0) {
+//   // Add the class initially
+//   sideScrollBlocks.forEach(block => block.classList.add('pulse-on'));
+
+//   // Add scroll event listener to the container
+//   const sideScrollContainer = document.getElementById('what-side-scroll');
+//   sideScrollContainer.addEventListener('scroll', handleScroll);
+
+//   // Function to handle scroll event
+//   function handleScroll() {
+//     // Check if scroll snapping is active for each side-scroll-block
+//     sideScrollBlocks.forEach(block => {
+//       const isSnapped = isBlockSnapped(block);
+//       if (isSnapped) {
+//         block.classList.remove('pulse-on');
+//       } 
+//     //   else {
+//     //     block.classList.add('pulse-on');
+//     //   }
+//     });
+//   }
+
+//   // Function to check if scroll snapping is active for a specific side-scroll-block
+//   function isBlockSnapped(block) {
+//     const containerRect = sideScrollContainer.getBoundingClientRect();
+//     const blockRect = block.getBoundingClientRect();
+//     const containerCenter = containerRect.left + containerRect.width / 2;
+//     const blockCenter = blockRect.left + blockRect.width / 2;
+//     const distanceToCenter = Math.abs(containerCenter - blockCenter);
+//     return distanceToCenter < 1;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// Get the side-scroll-block elements
+const sideScrollBlocks = document.querySelectorAll('.side-scroll-block');
+
+// Check if the elements exist before proceeding
+if (sideScrollBlocks.length > 0) {
+    // Add the class initially
+    sideScrollBlocks.forEach(block => block.classList.add('pulse-on'));
+
+    // Add scroll event listener to the container
+    const sideScrollContainer = document.getElementById('what-side-scroll');
+    sideScrollContainer.addEventListener('scroll', handleScroll);
+
+    // Function to handle scroll event
+    function handleScroll() {
+        // Check if scroll snapping is active for each side-scroll-block
+        sideScrollBlocks.forEach((block, index) => {
+            const isSnapped = isBlockSnapped(block);
+            const nextBlock = sideScrollBlocks[index + 1];
+            const isNextSnapped = nextBlock ? isBlockSnapped(nextBlock) : true;
+
+            if ((index === 0 && !isNextSnapped) || (isSnapped && (!nextBlock || !isNextSnapped))) {
+                block.classList.remove('pulse-on');
+            }
+        });
+    }
+
+    // Function to check if scroll snapping is active for a specific side-scroll-block
+    function isBlockSnapped(block) {
+        const containerRect = sideScrollContainer.getBoundingClientRect();
+        const blockRect = block.getBoundingClientRect();
+        const containerCenter = containerRect.left + containerRect.width / 2;
+        const blockCenter = blockRect.left + blockRect.width / 2;
+        const distanceToCenter = Math.abs(containerCenter - blockCenter);
+        return distanceToCenter < 1;
+    }
+}
+
+
+
+
+
+

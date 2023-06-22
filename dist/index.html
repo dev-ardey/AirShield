@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <title>Wind App</title>
+  <title>AirShield - Your Shield Against polluted air</title>
   
   <link rel="icon" type="image/x-icon" href="/assets/activated-shield-b03a1822.svg">
-  <script type="module" crossorigin src="/assets/index-6dabd036.js"></script>
-  <link rel="stylesheet" href="/assets/index-570dcf18.css">
+  <script type="module" crossorigin src="/assets/index-84d44133.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="stylesheet" href="/assets/index-5f20c737.css">
 </head>
 
 
@@ -24,23 +25,23 @@
         <ul class="popup-list ">
           <img src="/assets/clear-shield-29986638.svg" class="air-shield-popup-img">
           <p class="popup-text-big label">Protection Advised</p>
-          <br>
           <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
+          <br>
+          <br>
+          <li class="popup-text-small">Close the windows</li>
           <br>
           <li class="popup-text-small">Check AirShield before leaving</li>
           <br>
-          <li class="popup-text-small">Avoid outdoor activities inside the polluted zone</li>
+          <li class="popup-text-small">Use HEPA filter air purifiers indoors</li>
           <br>
           <li class="popup-text-small">Try and go to a non polluted zone when outside</li>
           <br>
-          <li class="popup-text-small">Stay indoors and close the windows</li>
+          <li class="popup-text-small">When having physical activity, limit exposure to polluted air zone</li>
           <br>
-          <li class="popup-text-small">Consider using air purifiers indoors</li>
-          <br>
-          <li class="popup-text-small">Wear a mask</li>
+          <li class="popup-text-small">Use N95 masks, those filter >95% or 99% of inhaled particles at 0.3 μm in size</li>
           <br>
           <br>
-          <p class="text-src"> ~ src harvard </p>
+          <p class="text-src"> View HOME for scientific studies </p>
         </ul>
       </div>
     </div>
@@ -53,19 +54,23 @@
           <ul class="popup-list">
             <img src="/assets/checked-shield-b046a8ae.svg" class="air-shield-popup-img">
             <p class="popup-text-big label">No protection needed</p>
-            <br>
             <p class="popup-text-med label">How do i SHIELD myself from polluted AIR</p>
+            <br>
             <br>
             <li class="popup-text-small">Check AirShield before leaving</li>
             <br>
-            <li class="popup-text-small">isolate seams and cracks in your house</li>
+            <li class="popup-text-small">You are free to open the windows</li>
             <br>
-            <li class="popup-text-small">Try and go to a non polluted zone when outside</li>
+            <li class="popup-text-small">Use HEPA filter air purifiers indoors</li>
             <br>
-            <li class="popup-text-small">Consider using air purifiers indoors</li>
+            <li class="popup-text-small">Isolate seams and cracks in your house</li>
             <br>
+            <li class="popup-text-small">When having physical activity, <br>stay within clean air zone</li>
             <br>
-            <p class="text-src"> ~ src harvard </p>
+            <!-- <li class="popup-text-small">Use N95 masks, those filter >95% or 99% <br> of inhaled particles at 0.3 μm in size</li>
+            <br> -->
+            <br>
+            <p class="text-src"> View HOME for scientific studies </p>
           </ul>
         </div>
       </div>
@@ -106,8 +111,7 @@
         </div>
         <!-- <div id="countdown-timer">wind calc</div> -->
         <div class="current-location " id="current-id">
-          <span class="location-name neumorphic-block"
-            id="current-location-id">
+          <span class="location-name neumorphic-block" id="current-location-id">
             CLOSEST
             POLLUTER <br>TATA
             STEEL</span>
@@ -142,7 +146,7 @@
             <!-- AirShield button -->
             <button id="overlay-button" class="">
             </button>
-            <div id="air-shield-text">AirShield</div>
+            <div id="air-shield-text">AirShield Advice</div>
             <span id="value-shield"></span>
             <div id="neumorphic-shield" class="neumorphic-block">
               <span class="value-shield"></span>

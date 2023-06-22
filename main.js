@@ -466,7 +466,7 @@ if ("geolocation" in navigator) {
           document.getElementById("green-arrow-id").src = greenArrowUrl;
           document.getElementById("wind-direction").innerHTML = "The wind from tatasteel is not blowing towards your location";
           document.getElementById("air-shield-img-id").src = checkedShieldUrl;
-          document.getElementById("value-shield").innerHTML = "Safe ⓘ";
+          document.getElementById("value-shield").innerHTML = "SAFE ⓘ";
           document.getElementById("green-cloud-id").classList.toggle("flowing-cloud");
 
           document.getElementById("overlay-button").addEventListener("click", function () {
@@ -496,7 +496,7 @@ if ("geolocation" in navigator) {
 
 
           document.getElementById("air-shield-img-id").src = clearShieldUrl;
-          document.getElementById("value-shield").innerHTML = "UnSafe ⓘ";
+          document.getElementById("value-shield").innerHTML = "UNSAFE ⓘ";
           document.getElementById("green-cloud-id").src = redCloudUrl;
           document.getElementById("green-cloud-id").classList.toggle("stopping-cloud");
           // background: linear-gradient(90deg, rgb(255, 60, 60), rgb(0, 119, 255))
