@@ -17,7 +17,10 @@
   --greyLight-1: #E4EBF5;
   --greyLight-2: #c8d0e7;
   --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
+  /* --greyDark: #9baacf; */
+  /* trying new darker one */
+  --greyDark: #6477a9;
+
 }
 
 
@@ -632,19 +635,19 @@ a:active {
 
 @keyframes pulse {
   0% {
-    border: 2px solid rgb(0, 255, 21,0);
+    border: 4px solid rgb(0, 255, 21,0);
     /* box-shadow: 5px 10px 10px rgb(0, 0, 0, 0.2) ; */
   }
   30% {
-    border: 2px solid rgb(0, 255, 21, 1);
+    border: 4px solid rgba(0, 255, 157);
     /* box-shadow: 5px 2px 10px rgb(0, 0, 0, 0.2) ; */
   }
   60% {
-    border: 2px solid rgb(0, 255, 21, 0);
+    border: 4px solid rgb(0, 255, 21, 0);
     /* box-shadow: 5px 2px 10px rgb(0, 0, 0, 0.2) ; */
   }
   100% {
-    border: 2px solid rgb(0, 255, 21,0);
+    border: 4px solid rgb(0, 255, 21,0);
     /* box-shadow: 5px 10px 10px rgb(0, 0, 0, 0.2) ; */
   }
 }

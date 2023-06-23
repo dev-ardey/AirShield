@@ -40,6 +40,7 @@ export default {
             "images/home/phone-14.png",
             "images/home/phone-14-b.png",
             "images/home/wind-data.png",
+            "images/home/location.png",
 
 
 
