@@ -105,40 +105,13 @@ function renderCurrentWeather(current) {
   setValue("current-low", current.lowTemp)
   setValue("current-wind", current.windDirection)
   setValue("current-precip", current.precip)
-  // maby i can use something like this to rotate green-arrow-id?
-  arrowRotate(document.querySelectorAll('.green-arrow-current'), current.windDirection)
-  // console.log(current.windDirection)
-  //  arrowColor(document.querySelectorAll('.green-arrow-current'), current.windDirection)
-  // change map air direction according to what the current degree is
 
-  // old working function that displays 8 different degrees, new function displays 360 versions
-  // if ((current.windDirection >= 337.5 || current.windDirection <= 22.5)) {
-  //   document.getElementById("temp-map-img").src = map180Url;
-  // }
-  // else if ((current.windDirection >= 22.6 || current.windDirection <= 67.5)) {
-  //   document.getElementById("temp-map-img").src = map225Url;
-  // }
-  // else if ((current.windDirection >= 67.6 || current.windDirection <= 112.5)) {
-  //   document.getElementById("temp-map-img").src = map270Url;
-  // }
-  // else if ((current.windDirection >= 112.6 || current.windDirection <= 157, 6.5)) {
-  //   document.getElementById("temp-map-img").src = map315Url;
-  // }
-  // else if ((current.windDirection >= 157.6 || current.windDirection <= 202.5)) {
-  //   document.getElementById("temp-map-img").src = map0Url;
-  // }
-  // else if ((current.windDirection >= 202.6 || current.windDirection <= 247.5)) {
-  //   document.getElementById("temp-map-img").src = map45Url;
-  // }
-  // else if ((current.windDirection >= 247.6 || current.windDirection <= 292.5)) {
-  //   document.getElementById("temp-map-img").src = map90Url;
-  // }
-  // else if ((current.windDirection >= 292.6 || current.windDirection <= 337.5)) {
-  //   document.getElementById("temp-map-img").src = map135Url;
-  // }
 
-  // new function displays 360 directions
-  arrowRotate(document.querySelectorAll('.pollution-angle-class'), current.windDirection)
+  // arrowRotate for .green-arrow-current and pollution-agle-class tijdelijk commented out om te switchen naar nieuwe api
+  // arrowRotate(document.querySelectorAll('.green-arrow-current'), data.wind.deg)
+  // arrowRotate(document.querySelectorAll('.pollution-angle-class'), data.wind.deg)
+
+  // console.log("api old= current.windDirection = " + current.windDirection)
 
 
 
@@ -146,10 +119,12 @@ function renderCurrentWeather(current) {
 
 function arrowRotate(elems, windDirection) {
   if (elems.length == 0) return;
-  elems.forEach(function (el) {
-    // windDirection + 180 is omdat image op de kop is
-    el.style.transform = "rotate(" + (windDirection + 180) + "deg)"
-  })
+  setTimeout(() => {
+    elems.forEach(function (el) {
+      // windDirection + 180 is omdat image op de kop is
+      el.style.transform = "rotate(" + (windDirection + 180) + "deg)"
+    })
+  }, 200); // Add a delay of 100 milliseconds (adjust as needed) ( a delay of 50 milliseconds breakes the code )
 }
 
 function arrowColor(elems) {
@@ -450,7 +425,29 @@ if ("geolocation" in navigator) {
       .then(response => response.json())
       .then(data => {
         var windDeg = data.wind.deg;
-        // console.log(data)
+        // console.log("api new = data.wind.deg = " + windDeg)
+
+
+
+
+
+        //  green arrow and map pollution direction based on improved api
+
+        newArrowRotate(document.querySelectorAll('.green-arrow-current'), windDeg)
+        newArrowRotate(document.querySelectorAll('.pollution-angle-class'), windDeg)
+
+        function newArrowRotate(elems, windDeg) {
+          if (elems.length == 0) return;
+          setTimeout(() => {
+            elems.forEach(function (el) {
+              el.style.transform = "rotate(" + (windDeg + 180) + "deg)";
+            });
+          }, 200); // Add a delay of 100 milliseconds (adjust as needed) ( a delay of 50 milliseconds breakes the code )
+        }
+
+
+
+
 
         // Check if wind is blowing from A towards the current location
         if (windBlowingFrom(windDeg, fromADeg)) {
@@ -474,14 +471,13 @@ if ("geolocation" in navigator) {
             document.getElementById("air-shield-popup-green-id").classList.toggle("show");
 
             document.getElementById("overlay-green").classList.toggle("show-background");
-     
-            
-            
+
+
+
             document.getElementById("hide-popup-green").classList.toggle("show");
             // document.getElementById("overlay-button").style.background = "rgba(46, 84, 190, 0.562)";
             document.getElementById("overlay-button").classList.toggle("move-button-up");
             // document.getElementById("overlay-button-img").classList.toggle("show");
-
 
           });
         } else {
@@ -492,7 +488,7 @@ if ("geolocation" in navigator) {
 
           document.getElementById("wind-direction").style.background = "linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127))";
           // linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127));
-                    // document.getElementById("wind-direction").style.background = "linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127));
+          // document.getElementById("wind-direction").style.background = "linear-gradient(270deg, rgb(255, 112, 119), rgb(252, 74, 127));
 
 
           document.getElementById("air-shield-img-id").src = clearShieldUrl;
@@ -514,8 +510,8 @@ if ("geolocation" in navigator) {
           document.getElementById("overlay-button").addEventListener("click", function () {
             document.getElementById("overlay-red").classList.toggle("show-background");
 
-           
-            
+
+
 
             // document.getElementById("header").classList.toggle("blur");
             document.getElementById("air-shield-popup-red-id").classList.toggle("show");
@@ -678,9 +674,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function showPollutionData() {
     const pollutionDataElement = document.getElementById("pollution-data");
     const overlayElement = document.getElementById("overlay");
-  isPollutionDataHidden = false;
-  pollutionDataElement.classList.remove("hide-box");
-  overlayElement.classList.add("show-background");
+    isPollutionDataHidden = false;
+    pollutionDataElement.classList.remove("hide-box");
+    overlayElement.classList.add("show-background");
   }
 
   // Function to hide the pollution data
