@@ -14,13 +14,13 @@ An innovative app designed to address health risks caused by air pollution in po
 • Has received positive feedback and numerous requests for expansion, demonstrating the efficiency and necessity of this app.
 
 
-the app includes:
+## the app includes:
 
 📍 Coordinates and Locations:
 
       The code defines coordinates for two locations and makes calculations with them.
 
-📟API Request Handling:
+📟 API Request Handling:
 
       It makes API to retrieve weather data for the polluter location.
       It implements a delay mechanism to prevent excessive API requests, with a 2-second delay for the first request and 
@@ -31,7 +31,7 @@ the app includes:
 
       It uses the navigator.geolocation API to get the user's current position (latitude and longitude).
 
-📡Weather Data Rendering:
+📡 Weather Data Rendering:
 
       The code fetches and renders various weather-related data such as temperature, wind direction, and precipitation.
       It rotates arrow icons based on wind direction.
@@ -41,18 +41,18 @@ the app includes:
 
       It provides the ability to toggle visibility of hourly and daily weather information.
 
-🩻Pollution Data:
+🩻 Pollution Data:
 
       The code includes a new section for fetching and displaying air pollution data, including AQI (Air Quality Index) and various pollutant components.
       It provides a button to toggle the display of pollution data.
       It uses geolocation to retrieve pollution data based on the user's location.
 
-🪄Button Interaction:
+🪄 Button Interaction:
 
       The code contains buttons that allow users to interact with the app, such as toggling visibility of specific      
       elements.
 
-⚙️Coordinate Calculations:
+⚙️ Coordinate Calculations:
 
       It includes functions for calculating bearings between coordinates.
 
@@ -64,10 +64,10 @@ the app includes:
 
       It imports CSS styles and applies them to various elements in the web page.
 
-📊Presentation of Data:
+📊 Presentation of Data:
 
       The code is designed to visually present weather and pollution data in a user-friendly manner.
 
-📈Error Handling:
+📈 Error Handling:
 
       It includes error handling for API requests and geolocation
