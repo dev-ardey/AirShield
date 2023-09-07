@@ -8,10 +8,10 @@
 **the app includes:
 **
 
-**Coordinates and Locations:
+📍**Coordinates and Locations:
 **  The code defines coordinates for two locations and makes calculations with them.
   
-**API Request Handling:
+⚫️**API Request Handling:
 **  It makes API to retrieve weather data for the polluter location.
   It implements a delay mechanism to prevent excessive API requests, with a 2-second delay for the first request and 
   10- minute intervals for subsequent requests.
