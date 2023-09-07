@@ -4,9 +4,13 @@
 
 
 An innovative app designed to address health risks caused by air pollution in pollution-prone areas.
+
 • Utilizes real-time data to alert users about approaching polluted air and provides information about the specific components in the air.
+
 • Offers users advice on optimal actions, such as opening windows and engaging in outdoor activities, to minimize pollution intake.
+
 • Incorporates scientific research to ensure the app is effective in helping users make informed decisions about their well-being.
+
 • Has received positive feedback and numerous requests for expansion, demonstrating the efficiency and necessity of this app.
 
 
